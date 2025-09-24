@@ -1,4 +1,4 @@
-// Praktikum 1
+// Praktikum 1 - Eksperimen Tipe Data List
 void main() {
   var list = [1, 2, 3];
   assert(list.length == 3);
