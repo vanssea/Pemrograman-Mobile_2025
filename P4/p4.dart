@@ -29,16 +29,34 @@
 //   print(halogen);
 // }
 
-// Modifikasi Tugas Praktikum 2 - Eksperimen Tipe Data Set
-void main() {
-  var names1 = <String>{};
-  Set<String> names2 = {};
+// // Modifikasi Tugas Praktikum 2 - Eksperimen Tipe Data Set
+// void main() {
+//   var names1 = <String>{};
+//   Set<String> names2 = {};
 
 
-  names1.add("Vanessa Cristin Natalia");
-  names2.add("2341720026");
-  names2.addAll(["Vanessa Cristin Natalia", "2341720026"]);
+//   names1.add("Vanessa Cristin Natalia");
+//   names2.add("2341720026");
+//   names2.addAll(["Vanessa Cristin Natalia", "2341720026"]);
   
-  print(names1);
-  print(names2);
+//   print(names1);
+//   print(names2);
+// }
+
+// Tugas Praktikum 3 - Eksperimen Tipe Data Maps
+void main() {
+  var gift = {
+    'first': 'partridge',
+    'second': 'turtledoves',
+    'fifth': 1
+  };
+
+  var nobleGases = {
+    2: 'helium',
+    10: 'neon',
+    18: 2,
+  };
+
+  print(gift);
+  print(nobleGases);
 }
