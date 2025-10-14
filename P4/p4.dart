@@ -78,35 +78,79 @@
 //   print('mhs2: $mhs2');
 // }
 
-// Praktikum 4 - Eksperimen Tipe Data List: Spread dan Control-flow Operators
-void main() {
-  var list = [1, 2, 3];
-  var list2 = [0, ...list];
-  // print(list);
-  // print(list2);
-  // print(list2.length);
+// // Praktikum 4 - Eksperimen Tipe Data List: Spread dan Control-flow Operators
+// void main() {
+//   var list = [1, 2, 3];
+//   var list2 = [0, ...list];
+//   // print(list);
+//   // print(list2);
+//   // print(list2.length);
 
-  // var list1 = [1, 2, null];
-  // print(list1);
-  // var list3 = [0, ...?list1];
-  // print(list3.length);
+//   // var list1 = [1, 2, null];
+//   // print(list1);
+//   // var list3 = [0, ...?list1];
+//   // print(list3.length);
 
-  // //Menambah variable list berisi NIM
-  // var nim = [2, 3, 4, 1, 7, 2, 0, 0, 2, 6];
-  // var listNIM = [0, ...nim];
-  // print(listNIM);
+//   // //Menambah variable list berisi NIM
+//   // var nim = [2, 3, 4, 1, 7, 2, 0, 0, 2, 6];
+//   // var listNIM = [0, ...nim];
+//   // print(listNIM);
 
-  // Menambah kode nav dengan collection if
-  bool promoActive = true;
-  var nav = ['Home', ' Furniture', 'Plants', if (promoActive) 'Outlet'];
-  print(nav);
+//   // Menambah kode nav dengan collection if
+//   bool promoActive = true;
+//   var nav = ['Home', ' Furniture', 'Plants', if (promoActive) 'Outlet'];
+//   print(nav);
   
-  String login = 'Manager';
-  var nav2 = ['Home', ' Furniture', 'Plants', if (login == 'Staff') 'Inventory'];
-  print(nav2);
+//   String login = 'Manager';
+//   var nav2 = ['Home', ' Furniture', 'Plants', if (login == 'Staff') 'Inventory'];
+//   print(nav2);
 
-  var listOfInts = [1, 2, 3];
-  var listOfStrings = ['#0', for (var i in listOfInts) '#$i'];
-  assert(listOfStrings[1] == '#1');
-  print(listOfStrings);
+//   var listOfInts = [1, 2, 3];
+//   var listOfStrings = ['#0', for (var i in listOfInts) '#$i'];
+//   assert(listOfStrings[1] == '#1');
+//   print(listOfStrings);
+// }
+
+
+// Praktikum 5 - Eksperimen Tipe Data Records
+// void main() {
+//   var record = ('first', a: 2, b: true, 'last');
+//   print(record);
+// }
+
+// langkah 3
+(int, int) tukar((int, int) record) {
+  var (a, b) = record;
+  return (b, a);
+}
+
+
+
+void main() {
+  // Langkah 1
+  var record = ('first', a: 2, b: true, 'last');
+  print('Record dari Langkah 1: $record');
+
+  // Contoh record dengan angka untuk ditukar
+  var angka = (10, 20);
+  print('Record awal: $angka');
+
+  // Gunakan fungsi tukar
+  var swapped = tukar(angka);
+  print('Record setelah ditukar: $swapped');
+
+  // Langkah 4
+  // Record type annotation in a variable declaration:
+  (String, int) mahasiswa = ('Vanessa Cristin Natalia', 2341720026);
+  print(mahasiswa);
+  print('Nama: ${mahasiswa.$1}');
+  print('NIM: ${mahasiswa.$2}');
+
+  // langkah 5
+  var mahasiswa2 = ('Vanessa Cristin Natalia', a: 2341720026, b: true, 'last');
+
+  print(mahasiswa2.$1); // Prints 'Vanessa Cristin Natalia'
+  print(mahasiswa2.a); // Prints 2341720026
+  print(mahasiswa2.b); // Prints true
+  print(mahasiswa2.$2); // Prints 'last'
 }
