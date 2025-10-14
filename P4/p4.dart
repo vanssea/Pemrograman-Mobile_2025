@@ -43,37 +43,70 @@
 //   print(names2);
 // }
 
+// void main() {
+//   // Map dengan key bertipe String
+//   var gifts = {
+//     'first': 'partridge',
+//     'second': 'turtledoves',
+//     'fifth': 'golden rings',
+//   };
+
+//   // Map dengan key bertipe int
+//   var nobleGases = {2: 'helium', 10: 'neon', 18: 'argon'};
+
+//   // Map kosong bertipe String-String
+//   var mhs1 = Map<String, String>();
+//   mhs1['nama'] = 'Vanessa Cristin Natalia';
+//   mhs1['nim'] = '2341720026';
+
+//   // Map kosong bertipe Int-String
+//   var mhs2 = Map<int, String>();
+//   mhs2[1] = 'Vanessa Cristin Natalia';
+//   mhs2[2] = '2341720026';
+
+//   // Menambahkan nama & NIM juga ke gifts dan nobleGases
+//   gifts['nama'] = 'Vanessa Cristin Natalia';
+//   gifts['nim'] = '2341720026';
+
+//   nobleGases[20] = 'Vanessa Cristin Natalia';
+//   nobleGases[21] = '2341720026';
+
+//   // Cetak hasil
+//   print('gifts: $gifts');
+//   print('nobleGases: $nobleGases');
+//   print('mhs1: $mhs1');
+//   print('mhs2: $mhs2');
+// }
+
+// Praktikum 4 - Eksperimen Tipe Data List: Spread dan Control-flow Operators
 void main() {
-  // Map dengan key bertipe String
-  var gifts = {
-    'first': 'partridge',
-    'second': 'turtledoves',
-    'fifth': 'golden rings',
-  };
+  var list = [1, 2, 3];
+  var list2 = [0, ...list];
+  // print(list);
+  // print(list2);
+  // print(list2.length);
 
-  // Map dengan key bertipe int
-  var nobleGases = {2: 'helium', 10: 'neon', 18: 'argon'};
+  // var list1 = [1, 2, null];
+  // print(list1);
+  // var list3 = [0, ...?list1];
+  // print(list3.length);
 
-  // Map kosong bertipe String-String
-  var mhs1 = Map<String, String>();
-  mhs1['nama'] = 'Vanessa Cristin Natalia';
-  mhs1['nim'] = '2341720026';
+  // //Menambah variable list berisi NIM
+  // var nim = [2, 3, 4, 1, 7, 2, 0, 0, 2, 6];
+  // var listNIM = [0, ...nim];
+  // print(listNIM);
 
-  // Map kosong bertipe Int-String
-  var mhs2 = Map<int, String>();
-  mhs2[1] = 'Vanessa Cristin Natalia';
-  mhs2[2] = '2341720026';
+  // Menambah kode nav dengan collection if
+  bool promoActive = true;
+  var nav = ['Home', ' Furniture', 'Plants', if (promoActive) 'Outlet'];
+  print(nav);
+  
+  String login = 'Manager';
+  var nav2 = ['Home', ' Furniture', 'Plants', if (login == 'Staff') 'Inventory'];
+  print(nav2);
 
-  // Menambahkan nama & NIM juga ke gifts dan nobleGases
-  gifts['nama'] = 'Vanessa Cristin Natalia';
-  gifts['nim'] = '2341720026';
-
-  nobleGases[20] = 'Vanessa Cristin Natalia';
-  nobleGases[21] = '2341720026';
-
-  // Cetak hasil
-  print('gifts: $gifts');
-  print('nobleGases: $nobleGases');
-  print('mhs1: $mhs1');
-  print('mhs2: $mhs2');
+  var listOfInts = [1, 2, 3];
+  var listOfStrings = ['#0', for (var i in listOfInts) '#$i'];
+  assert(listOfStrings[1] == '#1');
+  print(listOfStrings);
 }
