@@ -38,7 +38,7 @@ Dialog digunakan untuk menampilkan pop-up pesan sederhana kepada user.
 
 # Langkah 5 – Input dan Selection (TextField)
 TextField dipakai untuk menerima input teks dari user.
-![Praktikum5_Langkah 5](images/praktikum5_langkah5.jpeg)
+![Praktikum5_Langkah 5](images/praktikum5_langkah5.jpg)
 
 # Langkah 6 – Date and Time Pickers
 DatePicker memungkinkan user memilih tanggal dari kalender.
